@@ -1,0 +1,28 @@
+<table class="table">
+
+
+  <thead class="table-dark" >
+    <tr> 
+      <th>Product Name</th>
+      <th>Unit Price</th>
+      <th>Units in Stock</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tempProduct of products">
+      <td class="align-middle"> <img src="{{tempProduct.imageUrl}}" alt="test" height="75px" ></td>
+      <td class="align-middle">{{ tempProduct.name }}</td>
+      <td class="align-middle">{{ tempProduct.unitPrice | currency:'USD' }}</td>
+      <td class="align-middle">{{ tempProduct.unitsInStock }}</td>
+    </tr>
+  </tbody>
+
+</table>
+
+
+
+<!-- Product List by accessing the products from the component, values are assigned based on the call to our service
+<p *ngFor="let tempProduct of products">
+  {{ tempProduct.name }} - {{ tempProduct.unitPrice | currency:'USD' }}
+-->
