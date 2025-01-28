@@ -1,15 +1,16 @@
 <div class="main-content">
   <div class="section-content section-content-p30">
     <div class="container-fluid">
-      <div class="row">
+      <div class="product-grid">
         <!-- Loop over the collection of products-->
-        <div *ngFor="let tempProduct of products" class="col-md-4">
+        <div *ngFor="let tempProduct of products" class="col-md-3">
           <div class="product-box">
             <img src="{{tempProduct.imageUrl}}" alt="test" class="img-responsive">
             <h1>
               {{tempProduct.name}}
             </h1>
-
+            <div class="price">{{tempProduct.unitPrice | currency:'INR'}}</div>
+            <a href="#" class="primary-btn">Add To Cart</a>
           </div>
         </div>
 
