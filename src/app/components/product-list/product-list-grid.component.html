@@ -1,0 +1,59 @@
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Loop over the collection of products-->
+        <div *ngFor="let tempProduct of products" class="col-md-4">
+          <div class="product-box">
+            <img src="{{tempProduct.imageUrl}}" alt="test" class="img-responsive">
+            <h1>
+              {{tempProduct.name}}
+            </h1>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Product List by accessing the products from the component, values are assigned based on the call to our service
+<table class="table">
+
+
+  <thead class="table-dark" >
+    <tr> 
+      <th>Image</th>
+      <th>Product Name</th>
+      <th>Unit Price</th>
+      <th>Units in Stock</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tempProduct of products">
+      <td class="align-middle"> <img src="{{tempProduct.imageUrl}}" alt="test" height="75px" ></td>
+      <td class="align-middle">{{ tempProduct.name }}</td>
+      <td class="align-middle">{{ tempProduct.unitPrice}}</td>
+      <td class="align-middle">{{ tempProduct.unitsInStock }}</td>
+      <td class="align-middle"><button class="btn btn-primary">Add To Cart</button></td>
+    </tr>
+  </tbody>
+
+</table>
+
+
+Product List by accessing the products from the component, values are assigned based on the call to our service
+<p *ngFor="let tempProduct of products">
+  {{ tempProduct.name }} - {{ tempProduct.unitPrice | currency:'USD' }}
+-->
