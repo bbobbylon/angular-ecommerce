@@ -6,9 +6,9 @@
         <div *ngFor="let tempProduct of products" class="col-md-3">
           <div class="product-box">
             <img src="{{tempProduct.imageUrl}}" alt="test" class="img-responsive">
-            <h1>
+            <h5>
               {{tempProduct.name}}
-            </h1>
+            </h5>
             <div class="price">{{tempProduct.unitPrice | currency:'INR'}}</div>
             <a href="#" class="primary-btn">Add To Cart</a>
           </div>
