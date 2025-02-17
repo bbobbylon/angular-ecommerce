@@ -20,5 +20,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     // http://localhost:8080/api/products/search/findByCategoryId?id=1 will give us the books list since we used routerLink = /category/1 in app.component.html
     //behind the scenes, Spring executes a query similar to SELECT * FROM product WHERE category_id=?
     Page<Product> findByCategoryId(@Param("id") Long id, Pageable pageable);
+    //SELECT * FROM product WHERE unit_price=?
     Page<Product> findByUnitPrice(@Param("unit_price") BigDecimal whatever, Pageable pageable);
 }
